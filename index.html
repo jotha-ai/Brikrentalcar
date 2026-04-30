@@ -9,171 +9,124 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .bg-brik-blue { background-color: #0D1B36; }
+        .text-brik-blue { color: #0D1B36; }
+        .bg-brik-orange { background-color: #F26332; }
+        .text-brik-orange { color: #F26332; }
         .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .car-card:hover { transform: translateY(-10px); }
     </style>
 </head>
-<body class="bg-[#F8FAFC] text-[#0F172A]">
+<body class="bg-[#F8FAFC] text-[#0D1B36]">
 
-    <!-- Navbar Moderna -->
+    <!-- Navbar -->
     <nav class="fixed top-0 w-full glass z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-2">
-                <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-200">
-                    <i class="fas fa-key"></i>
+                <div class="flex flex-col leading-none">
+                    <span class="text-3xl font-black tracking-tighter text-brik-blue">Brik</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-brik-orange">Car rental</span>
                 </div>
-                <span class="text-2xl font-extrabold tracking-tight text-blue-900">Brik<span class="text-blue-600">Rental</span></span>
             </div>
-            <a href="https://wa.me/14073937237" class="bg-[#25D366] hover:scale-105 text-white px-6 py-3 rounded-2xl font-bold shadow-xl shadow-green-100 transition-all flex items-center gap-2 text-sm">
-                <i class="fab fa-whatsapp text-lg"></i> RESERVAR AHORA
+            <a href="https://wa.me/14073937237" class="bg-brik-orange hover:bg-[#d94f26] text-white px-6 py-3 rounded-2xl font-bold shadow-lg transition-all flex items-center gap-2 text-sm">
+                <i class="fab fa-whatsapp text-lg"></i> RESERVAR
             </a>
         </div>
     </nav>
 
-    <!-- Hero Section con Impacto -->
-    <header class="relative pt-32 pb-20 px-6 overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-10">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-400 via-transparent to-transparent"></div>
-        </div>
-        
-        <div class="max-w-5xl mx-auto text-center">
-            <span class="inline-block px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-xs font-bold tracking-widest uppercase mb-6">Confianza y Transparencia</span>
-            <h1 class="text-5xl md:text-7xl font-extrabold text-blue-950 mb-6 leading-tight">
-                Tu viaje en Florida <br>empieza <span class="text-blue-600 underline decoration-blue-200">aquí.</span>
+    <!-- Hero Section -->
+    <header class="pt-44 pb-20 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-brik-blue mb-6 leading-tight">
+                Tu viaje en Florida <br><span class="text-brik-orange">empieza con Brik</span>
             </h1>
-            <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-12 leading-relaxed">
-                Renta de autos sin cargos ocultos. Entrega personalizada en aeropuertos y hoteles de Miami y Orlando.
+            <p class="text-gray-500 text-lg mb-10 max-w-2xl mx-auto">
+                Atención 100% en español y entregas personalizadas en los principales aeropuertos.
             </p>
-            
-            <div class="flex flex-wrap justify-center gap-4">
-                <div class="flex items-center gap-3 bg-white px-6 py-4 rounded-2xl shadow-sm border border-gray-100">
-                    <i class="fas fa-check-circle text-blue-600"></i>
-                    <span class="font-semibold">Seguro Incluido</span>
-                </div>
-                <div class="flex items-center gap-3 bg-white px-6 py-4 rounded-2xl shadow-sm border border-gray-100">
-                    <i class="fas fa-check-circle text-blue-600"></i>
-                    <span class="font-semibold">Km Ilimitado</span>
-                </div>
-                <div class="flex items-center gap-3 bg-white px-6 py-4 rounded-2xl shadow-sm border border-gray-100">
-                    <i class="fas fa-check-circle text-blue-600"></i>
-                    <span class="font-semibold">Atención 24/7</span>
-                </div>
-            </div>
         </div>
     </header>
 
-    <!-- Flota con Imágenes Reales (Simuladas) -->
-    <main class="max-w-7xl mx-auto px-6 py-20">
-        <div class="flex justify-between items-end mb-12">
-            <div>
-                <h2 class="text-3xl font-extrabold text-blue-950">Nuestra Flota</h2>
-                <p class="text-gray-500 mt-2">Vehículos nuevos y sanitizados</p>
-            </div>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <!-- Sedán -->
-            <div class="group bg-white rounded-[2rem] overflow-hidden shadow-xl shadow-gray-100 border border-gray-50 hover:border-blue-200 transition-all">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&q=80&w=800" alt="Sedan" class="w-full h-full object-cover group-hover:scale-110 transition-duration-500">
-                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-blue-600">TOP VENTAS</div>
+    <!-- Sección de Flota -->
+    <main class="max-w-7xl mx-auto px-6 py-10">
+        <h2 class="text-3xl font-extrabold text-center mb-12">Nuestra Flota</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+            <!-- Compacto -->
+            <div class="car-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl shadow-gray-100/50 border border-gray-50 transition-all duration-300">
+                <div class="h-60 p-8 flex items-center justify-center bg-gray-50/50">
+                    <img src="https://www.toyocosta.com/wp-content/uploads/2024/10/corolla_sedan_plateado.png" alt="Compacto" class="max-w-full max-h-full object-contain">
                 </div>
-                <div class="p-8">
-                    <div class="flex justify-between items-start mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-blue-950">Sedán Económico</h3>
-                            <p class="text-sm text-gray-400">Toyota Corolla o similar</p>
-                        </div>
-                        <div class="text-right">
-                            <span class="text-2xl font-black text-blue-600">$35</span>
-                            <span class="text-xs text-gray-400 block uppercase font-bold">/ día</span>
-                        </div>
-                    </div>
-                    <div class="flex gap-4 mb-8 text-sm text-gray-500">
-                        <span><i class="fas fa-user-friends mr-1"></i> 5</span>
-                        <span><i class="fas fa-suitcase mr-1"></i> 2</span>
-                        <span><i class="fas fa-gas-pump mr-1"></i> Híbrido/G</span>
-                    </div>
-                    <a href="https://wa.me/14073937237" class="block w-full bg-blue-50 text-blue-700 font-bold py-4 rounded-2xl text-center group-hover:bg-blue-600 group-hover:text-white transition-all">
-                        Consultar Disponibilidad
-                    </a>
+                <div class="p-8 text-center">
+                    <h3 class="text-2xl font-bold text-brik-blue">Compacto</h3>
+                    <p class="text-gray-400 mb-6 text-sm">Toyota Corolla o similar</p>
+                    <span class="text-3xl font-black text-brik-blue block mb-6">$35<span class="text-sm text-gray-400 font-normal">/día</span></span>
+                    <a href="https://wa.me/14073937237" class="inline-block w-full bg-brik-blue text-white py-3 rounded-xl font-bold hover:bg-brik-orange transition-colors">Reservar</a>
                 </div>
             </div>
 
             <!-- SUV -->
-            <div class="group bg-white rounded-[2rem] overflow-hidden shadow-xl shadow-gray-100 border border-gray-50 hover:border-blue-200 transition-all">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800" alt="SUV" class="w-full h-full object-cover group-hover:scale-110 transition-duration-500">
+            <div class="car-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl shadow-gray-100/50 border border-gray-50 transition-all duration-300">
+                <div class="h-60 p-8 flex items-center justify-center bg-gray-50/50">
+                    <img src="https://di-shared-assets.dealerinspire.com/legacy/rackspace/ldm-images/2021-Nissan-Rogue-SL-trim.png" alt="SUV" class="max-w-full max-h-full object-contain">
                 </div>
-                <div class="p-8">
-                    <div class="flex justify-between items-start mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-blue-950">SUV Familiar</h3>
-                            <p class="text-sm text-gray-400">Nissan Rogue o similar</p>
-                        </div>
-                        <div class="text-right">
-                            <span class="text-2xl font-black text-blue-600">$55</span>
-                            <span class="text-xs text-gray-400 block uppercase font-bold">/ día</span>
-                        </div>
-                    </div>
-                    <div class="flex gap-4 mb-8 text-sm text-gray-500">
-                        <span><i class="fas fa-user-friends mr-1"></i> 5</span>
-                        <span><i class="fas fa-suitcase mr-1"></i> 4</span>
-                        <span><i class="fas fa-snowflake mr-1"></i> A/C</span>
-                    </div>
-                    <a href="https://wa.me/14073937237" class="block w-full bg-blue-50 text-blue-700 font-bold py-4 rounded-2xl text-center group-hover:bg-blue-600 group-hover:text-white transition-all">
-                        Consultar Disponibilidad
-                    </a>
+                <div class="p-8 text-center">
+                    <h3 class="text-2xl font-bold text-brik-blue">SUV Standard</h3>
+                    <p class="text-gray-400 mb-6 text-sm">Nissan Rogue o similar</p>
+                    <span class="text-3xl font-black text-brik-blue block mb-6">$55<span class="text-sm text-gray-400 font-normal">/día</span></span>
+                    <a href="https://wa.me/14073937237" class="inline-block w-full bg-brik-blue text-white py-3 rounded-xl font-bold hover:bg-brik-orange transition-colors">Reservar</a>
                 </div>
             </div>
 
             <!-- Minivan -->
-            <div class="group bg-white rounded-[2rem] overflow-hidden shadow-xl shadow-gray-100 border border-gray-50 hover:border-blue-200 transition-all">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800" alt="Minivan" class="w-full h-full object-cover group-hover:scale-110 transition-duration-500">
+            <div class="car-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl shadow-gray-100/50 border border-gray-50 transition-all duration-300">
+                <div class="h-60 p-8 flex items-center justify-center bg-gray-50/50">
+                    <img src="https://d2ivfcfbdvj3sm.cloudfront.net/IPn4ggr9pM0_HbYN/55630/stills_0640_png/MY2024/55630/55630_st0640_116.webp?c=172&p=164&m=1&o=png&s=3AL7CeHE3ds_9Y8boqvafV" alt="Minivan" class="max-w-full max-h-full object-contain">
                 </div>
-                <div class="p-8">
-                    <div class="flex justify-between items-start mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-blue-950">Premium Van</h3>
-                            <p class="text-sm text-gray-400">Chrysler Pacifica (7 Pax)</p>
-                        </div>
-                        <div class="text-right">
-                            <span class="text-2xl font-black text-blue-600">$75</span>
-                            <span class="text-xs text-gray-400 block uppercase font-bold">/ día</span>
-                        </div>
-                    </div>
-                    <div class="flex gap-4 mb-8 text-sm text-gray-500">
-                        <span><i class="fas fa-user-friends mr-1"></i> 7</span>
-                        <span><i class="fas fa-suitcase mr-1"></i> 5</span>
-                        <span><i class="fas fa-tv mr-1"></i> Entretenimiento</span>
-                    </div>
-                    <a href="https://wa.me/14073937237" class="block w-full bg-blue-50 text-blue-700 font-bold py-4 rounded-2xl text-center group-hover:bg-blue-600 group-hover:text-white transition-all">
-                        Consultar Disponibilidad
-                    </a>
+                <div class="p-8 text-center">
+                    <h3 class="text-2xl font-bold text-brik-blue">Minivan</h3>
+                    <p class="text-gray-400 mb-6 text-sm">Chrysler Pacifica o similar[cite: 1]</p>
+                    <span class="text-3xl font-black text-brik-blue block mb-6">$75<span class="text-sm text-gray-400 font-normal">/día</span></span>
+                    <a href="https://wa.me/14073937237" class="inline-block w-full bg-brik-blue text-white py-3 rounded-xl font-bold hover:bg-brik-orange transition-colors">Reservar</a>
                 </div>
             </div>
         </div>
-    </main>
 
-    <!-- Footer Simple y Elegante -->
-    <footer class="bg-blue-950 text-white py-20">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-8">¿Listo para conducir en Florida?</h2>
-            <div class="flex flex-wrap justify-center gap-8 mb-12">
-                <div class="text-center">
-                    <div class="text-2xl font-bold">100%</div>
-                    <div class="text-blue-300 text-sm">Transparencia</div>
+        <!-- SECCIÓN DE UBICACIONES REQUERIDA -->
+        <section class="bg-white rounded-[3rem] p-12 shadow-sm border border-gray-50">
+            <h2 class="text-3xl font-extrabold text-center text-brik-blue mb-12">Nuestras Ubicaciones</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Miami -->
+                <div class="text-center p-6 border-r border-gray-100 last:border-0">
+                    <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mx-auto mb-6 text-brik-orange text-2xl">
+                        <i class="fas fa-plane-arrival"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Miami Internacional</h4>
+                    <p class="text-gray-500 text-sm">Servicio VIP de entrega directa en terminal[cite: 1].</p>
                 </div>
-                <div class="text-center">
-                    <div class="text-2xl font-bold">+500</div>
-                    <div class="text-blue-300 text-sm">Clientes Felices</div>
+                <!-- Orlando -->
+                <div class="text-center p-6 border-r border-gray-100 last:border-0">
+                    <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mx-auto mb-6 text-brik-orange text-2xl">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">MCO Orlando</h4>
+                    <p class="text-gray-500 text-sm">Punto estratégico cerca de los parques temáticos[cite: 1].</p>
                 </div>
-                <div class="text-center">
-                    <div class="text-2xl font-bold">Sin Depósito</div>
-                    <div class="text-blue-300 text-sm">Opcional</div>
+                <!-- Fort Lauderdale -->
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mx-auto mb-6 text-brik-orange text-2xl">
+                        <i class="fas fa-anchor"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Fort Lauderdale</h4>
+                    <p class="text-gray-500 text-sm">Ideal para recogidas rápidas y viajes de negocios[cite: 1].</p>
                 </div>
             </div>
-            <p class="opacity-40 text-sm italic">© 2026 Brikrentalcar. Florida, USA. El servicio que tu familia merece.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brik-blue text-white py-16 mt-20">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="text-2xl font-black mb-4">Brik <span class="text-brik-orange">Car Rental</span></div>
+            <p class="text-gray-400 text-sm">© 2026 Brik Rental Florida. Expertos en comunidad latina[cite: 1].</p>
         </div>
     </footer>
 

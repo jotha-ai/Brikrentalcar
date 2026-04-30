@@ -3,207 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brik Car Rental | Servicio Garantizado en Florida</title>
+    <title>Brik Car Rental | Florida Premium</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        .bg-brik-blue { background-color: #0D1B36; }
         .text-brik-blue { color: #0D1B36; }
         .bg-brik-orange { background-color: #F26332; }
         .text-brik-orange { color: #F26332; }
-        .glass { background: rgba(255, 255, 255, 0.90); backdrop-filter: blur(12px); }
         
-        .hero-bg {
-            background: linear-gradient(rgba(13, 27, 54, 0.6), rgba(13, 27, 54, 0.4)), 
-                        url('https://raw.githubusercontent.com/brikcarrental-spec/Brikrental/main/input_file_0.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+        /* PORTADA MODERNA FULL SCREEN */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #000;
         }
-        .testimonial-card { transition: all 0.3s ease; }
-        .testimonial-card:hover { transform: translateY(-5px); border-color: #F26332; }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7; /* Oscurece un poco para que el texto resalte */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(15px);
+        }
+
+        .car-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .car-card:hover { transform: translateY(-12px); shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
     </style>
 </head>
-<body class="bg-[#F8FAFC] text-[#0D1B36]">
+<body class="bg-gray-50">
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full glass z-50 border-b border-gray-100">
+    <!-- Navbar Minimalista -->
+    <nav class="fixed top-0 w-full glass-nav z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <div class="flex flex-col leading-none">
-                    <span class="text-3xl font-black tracking-tighter text-brik-blue">Brik</span>
-                    <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-brik-orange">Car rental</span>
-                </div>
+            <div class="flex flex-col leading-none">
+                <span class="text-3xl font-black tracking-tighter text-brik-blue italic">Brik</span>
+                <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-brik-orange">Car rental</span>
             </div>
-            <a href="https://wa.me/14073937237" class="bg-brik-orange hover:bg-[#d94f26] text-white px-6 py-3 rounded-2xl font-bold shadow-lg transition-all flex items-center gap-2 text-sm">
-                <i class="fab fa-whatsapp text-lg"></i> RESERVAR
+            <a href="https://wa.me/14073937237" class="bg-brik-orange text-white px-7 py-3 rounded-full font-bold shadow-lg hover:scale-105 transition-all text-sm uppercase tracking-wider">
+                <i class="fab fa-whatsapp mr-2"></i> Reservar
             </a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero-bg min-h-[85vh] flex items-center justify-center text-center px-6 pt-20">
-        <div class="max-w-4xl bg-black/20 backdrop-blur-md p-12 rounded-[3rem] border border-white/20 shadow-2xl">
-            <span class="inline-block px-4 py-2 bg-brik-orange text-white rounded-full text-xs font-bold tracking-widest uppercase mb-6">Confianza y Seguridad</span>
-            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight drop-shadow-2xl">
-                Tu auto listo en <br><span class="text-brik-orange">el Aeropuerto</span>
+    <!-- PORTADA IMPACTANTE (HERO) -->
+    <section class="hero-section">
+        <!-- AQUÍ SE CARGA TU FOTO DE MIAMI -->
+        <img src="pexels-irasema-mcallister-6937301.jpg" alt="Miami Ocean Drive" class="hero-image">
+        
+        <div class="hero-content">
+            <h1 class="text-5xl md:text-8xl font-extrabold mb-6 tracking-tighter leading-none">
+                FLORIDA <br> <span class="text-brik-orange">SIN LÍMITES</span>
             </h1>
-            <p class="text-white text-lg md:text-xl mb-10 max-w-2xl mx-auto font-medium">
-                Sin filas largas ni depósitos sorpresa. Entrega directa en Miami y Orlando con soporte 100% en español.
+            <p class="text-lg md:text-2xl mb-10 max-w-2xl mx-auto font-light text-gray-100">
+                Tu vehículo listo en el Aeropuerto. Sin depósitos ocultos. <br>
+                <strong>Miami • Orlando • Ft. Lauderdale</strong>
             </p>
-            <a href="#flota" class="bg-white text-brik-blue px-10 py-5 rounded-2xl font-black shadow-2xl hover:bg-brik-orange hover:text-white transition-all transform hover:scale-105 inline-block">
-                Ver Vehículos Disponibles
-            </a>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#flota" class="bg-white text-brik-blue px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-brik-orange hover:text-white transition-all shadow-2xl">
+                    Ver Flota
+                </a>
+                <a href="https://wa.me/14073937237" class="border-2 border-white text-white px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-brik-blue transition-all">
+                    Contacto Directo
+                </a>
+            </div>
         </div>
-    </header>
+        
+        <!-- Indicador de scroll -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
 
     <!-- Sección de Flota -->
-    <main id="flota" class="max-w-7xl mx-auto px-6 py-24">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-black text-brik-blue mb-4">Nuestra Flota Premium</h2>
-            <div class="w-24 h-1.5 bg-brik-orange mx-auto rounded-full"></div>
+    <main id="flota" class="max-w-7xl mx-auto px-6 py-32">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+            <div>
+                <h2 class="text-5xl font-black text-brik-blue italic">Nuestra Flota</h2>
+                <p class="text-gray-400 mt-2 font-medium">Modelos 2024-2025 garantizados.</p>
+            </div>
+            <div class="h-1 bg-brik-orange w-32 mb-2 hidden md:block"></div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
             <!-- Compacto -->
-            <div class="group bg-white rounded-[2.5rem] overflow-hidden shadow-xl shadow-gray-100 border border-gray-50 hover:-translate-y-4 transition-all duration-500">
-                <div class="h-60 p-8 flex items-center justify-center bg-gray-50/50 group-hover:bg-orange-50 transition-colors">
-                    <img src="https://www.toyocosta.com/wp-content/uploads/2024/10/corolla_sedan_plateado.png" alt="Compacto" class="max-w-full max-h-full object-contain transition-transform group-hover:scale-110">
+            <div class="car-card bg-white rounded-[3rem] p-4 shadow-sm border border-gray-100 group">
+                <div class="bg-gray-50 rounded-[2.5rem] h-64 flex items-center justify-center p-6 group-hover:bg-orange-50 transition-colors">
+                    <img src="https://www.toyocosta.com/wp-content/uploads/2024/10/corolla_sedan_plateado.png" alt="Compacto" class="max-w-full max-h-full object-contain">
                 </div>
-                <div class="p-8 text-center">
-                    <h3 class="text-2xl font-bold text-brik-blue">Compacto</h3>
-                    <p class="text-gray-400 mb-6 text-sm italic">Toyota Corolla o similar</p>
-                    <span class="text-3xl font-black text-brik-orange block mb-6">$35<span class="text-sm text-gray-400 font-normal">/día</span></span>
-                    <a href="https://wa.me/14073937237" class="inline-block w-full bg-brik-blue text-white py-4 rounded-2xl font-bold hover:shadow-xl transition-all">Reservar</a>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-brik-blue">Compacto / Mid Size</h3>
+                    <p class="text-gray-400 text-sm mb-6">Toyota Corolla o similar</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-3xl font-black text-brik-blue">$35<span class="text-xs text-gray-300 font-normal ml-1">/DÍA</span></span>
+                        <a href="https://wa.me/14073937237" class="bg-brik-blue text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-brik-orange transition-all shadow-lg">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
             <!-- SUV -->
-            <div class="group bg-white rounded-[2.5rem] overflow-hidden shadow-xl shadow-gray-100 border border-gray-50 hover:-translate-y-4 transition-all duration-500">
-                <div class="h-60 p-8 flex items-center justify-center bg-gray-50/50 group-hover:bg-orange-50 transition-colors">
-                    <img src="https://di-shared-assets.dealerinspire.com/legacy/rackspace/ldm-images/2021-Nissan-Rogue-SL-trim.png" alt="SUV" class="max-w-full max-h-full object-contain transition-transform group-hover:scale-110">
+            <div class="car-card bg-white rounded-[3rem] p-4 shadow-sm border border-gray-100 group">
+                <div class="bg-gray-50 rounded-[2.5rem] h-64 flex items-center justify-center p-6 group-hover:bg-orange-50 transition-colors">
+                    <img src="https://di-shared-assets.dealerinspire.com/legacy/rackspace/ldm-images/2021-Nissan-Rogue-SL-trim.png" alt="SUV" class="max-w-full max-h-full object-contain">
                 </div>
-                <div class="p-8 text-center">
+                <div class="p-8">
                     <h3 class="text-2xl font-bold text-brik-blue">SUV Standard</h3>
-                    <p class="text-gray-400 mb-6 text-sm italic">Nissan Rogue o similar</p>
-                    <span class="text-3xl font-black text-brik-orange block mb-6">$55<span class="text-sm text-gray-400 font-normal">/día</span></span>
-                    <a href="https://wa.me/14073937237" class="inline-block w-full bg-brik-blue text-white py-4 rounded-2xl font-bold hover:shadow-xl transition-all">Reservar</a>
+                    <p class="text-gray-400 text-sm mb-6">Nissan Rogue o similar</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-3xl font-black text-brik-blue">$55<span class="text-xs text-gray-300 font-normal ml-1">/DÍA</span></span>
+                        <a href="https://wa.me/14073937237" class="bg-brik-blue text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-brik-orange transition-all shadow-lg">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
             <!-- Minivan -->
-            <div class="group bg-white rounded-[2.5rem] overflow-hidden shadow-xl shadow-gray-100 border border-gray-50 hover:-translate-y-4 transition-all duration-500">
-                <div class="h-60 p-8 flex items-center justify-center bg-gray-50/50 group-hover:bg-orange-50 transition-colors">
-                    <img src="https://d2ivfcfbdvj3sm.cloudfront.net/IPn4ggr9pM0_HbYN/55630/stills_0640_png/MY2024/55630/55630_st0640_116.webp?c=172&p=164&m=1&o=png&s=3AL7CeHE3ds_9Y8boqvafV" alt="Minivan" class="max-w-full max-h-full object-contain transition-transform group-hover:scale-110">
+            <div class="car-card bg-white rounded-[3rem] p-4 shadow-sm border border-gray-100 group">
+                <div class="bg-gray-50 rounded-[2.5rem] h-64 flex items-center justify-center p-6 group-hover:bg-orange-50 transition-colors">
+                    <img src="https://d2ivfcfbdvj3sm.cloudfront.net/IPn4ggr9pM0_HbYN/55630/stills_0640_png/MY2024/55630/55630_st0640_116.webp?c=172&p=164&m=1&o=png&s=3AL7CeHE3ds_9Y8boqvafV" alt="Minivan" class="max-w-full max-h-full object-contain">
                 </div>
-                <div class="p-8 text-center">
-                    <h3 class="text-2xl font-bold text-brik-blue">Minivan (7-8 Pax)</h3>
-                    <p class="text-gray-400 mb-6 text-sm italic">Chrysler Pacifica o similar</p>
-                    <span class="text-3xl font-black text-brik-orange block mb-6">$75<span class="text-sm text-gray-400 font-normal">/día</span></span>
-                    <a href="https://wa.me/14073937237" class="inline-block w-full bg-brik-blue text-white py-4 rounded-2xl font-bold hover:shadow-xl transition-all">Reservar</a>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-brik-blue">Minivan (8 Pax)</h3>
+                    <p class="text-gray-400 text-sm mb-6">Chrysler Pacifica o similar</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-3xl font-black text-brik-blue">$75<span class="text-xs text-gray-300 font-normal ml-1">/DÍA</span></span>
+                        <a href="https://wa.me/14073937237" class="bg-brik-blue text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-brik-orange transition-all shadow-lg">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <!-- SECCIÓN DE RESEÑAS REALISTAS -->
-        <section class="py-20">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-extrabold text-brik-blue mb-4 uppercase tracking-wider">Lo que dicen nuestros clientes</h2>
-                <p class="text-gray-500 italic">Servicio 100% garantizado y confiable</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Reseña 1 -->
-                <div class="testimonial-card bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm">
-                    <div class="flex gap-1 text-yellow-400 mb-4 text-sm">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-6 leading-relaxed">"Increíble servicio. Me entregaron el vehículo en la puerta del aeropuerto de Miami sin retrasos. Muy seguro y confiable."</p>
-                    <div class="flex items-center gap-3">
-                        <img src="https://i.pravatar.cc/150?u=1" class="w-10 h-10 rounded-full grayscale" alt="Cliente">
-                        <div>
-                            <p class="font-bold text-xs">Carlos M.</p>
-                            <p class="text-[10px] text-gray-400">Desde Colombia</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Reseña 2 -->
-                <div class="testimonial-card bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm">
-                    <div class="flex gap-1 text-yellow-400 mb-4 text-sm">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-6 leading-relaxed">"Todo el proceso fue transparente. El auto estaba impecable y el personal habla español perfectamente. ¡Recomendados[cite: 1]!"</p>
-                    <div class="flex items-center gap-3">
-                        <img src="https://i.pravatar.cc/150?u=2" class="w-10 h-10 rounded-full grayscale" alt="Cliente">
-                        <div>
-                            <p class="font-bold text-xs">Elena R.</p>
-                            <p class="text-[10px] text-gray-400">Desde México</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Reseña 3 -->
-                <div class="testimonial-card bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm">
-                    <div class="flex gap-1 text-yellow-400 mb-4 text-sm">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-6 leading-relaxed">"Alquilé una Minivan para mi familia en Orlando y todo salió perfecto. Puntualidad garantizada en MCO[cite: 1]."</p>
-                    <div class="flex items-center gap-3">
-                        <img src="https://i.pravatar.cc/150?u=3" class="w-10 h-10 rounded-full grayscale" alt="Cliente">
-                        <div>
-                            <p class="font-bold text-xs">Javier S.</p>
-                            <p class="text-[10px] text-gray-400">Desde Argentina</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Reseña 4 -->
-                <div class="testimonial-card bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm">
-                    <div class="flex gap-1 text-yellow-400 mb-4 text-sm">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-6 leading-relaxed">"Brik Rental es lo mejor de Florida. Cero estrés en Ft. Lauderdale. Servicio rápido, honesto y muy profesional[cite: 1]."</p>
-                    <div class="flex items-center gap-3">
-                        <img src="https://i.pravatar.cc/150?u=4" class="w-10 h-10 rounded-full grayscale" alt="Cliente">
-                        <div>
-                            <p class="font-bold text-xs">Mónica P.</p>
-                            <p class="text-[10px] text-gray-400">Desde Chile</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Ubicaciones -->
-        <section class="bg-brik-blue rounded-[3rem] p-12 md:p-20 shadow-2xl mt-20 relative overflow-hidden text-white">
-            <h2 class="text-3xl font-extrabold text-center mb-16">Puntos de Entrega Directa</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="text-center">
-                    <div class="text-brik-orange text-4xl mb-6"><i class="fas fa-plane-arrival"></i></div>
-                    <h4 class="text-xl font-bold mb-3">Miami Internacional</h4>
-                    <p class="text-blue-100/60 text-sm">Recogida sin filas directamente en la terminal[cite: 1].</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-brik-orange text-4xl mb-6"><i class="fas fa-magic"></i></div>
-                    <h4 class="text-xl font-bold mb-3">MCO Orlando</h4>
-                    <p class="text-blue-100/60 text-sm">Optimizado para tu llegada a los parques[cite: 1].</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-brik-orange text-4xl mb-6"><i class="fas fa-sun"></i></div>
-                    <h4 class="text-xl font-bold mb-3">Fort Lauderdale</h4>
-                    <p class="text-blue-100/60 text-sm">Atención rápida y personalizada garantizada[cite: 1].</p>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-100 py-12 text-center">
-        <div class="text-2xl font-black text-brik-blue mb-4 uppercase tracking-tighter">Brik <span class="text-brik-orange">Car Rental</span></div>
-        <p class="text-gray-400 text-xs font-medium tracking-widest">© 2026 FLORIDA, USA. TU CONFIANZA ES NUESTRA GARANTÍA[cite: 1].</p>
+    <!-- Reseñas Modernas -->
+    <section class="bg-white py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-center text-4xl font-black mb-20 italic">Clientes Satisfechos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-10 rounded-[3rem] bg-gray-50 border border-gray-100">
+                    <div class="text-brik-orange mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 italic mb-8 text-lg">"La mejor experiencia en Miami. Recogí el auto en la terminal sin demoras. Servicio muy profesional."</p>
+                    <div class="font-bold">Juan P. <span class="font-normal text-gray-400 ml-2">Desde México</span></div>
+                </div>
+                <div class="p-10 rounded-[3rem] bg-gray-50 border border-gray-100">
+                    <div class="text-brik-orange mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 italic mb-8 text-lg">"Servicio confiable y autos nuevos. Alquilamos en Orlando y todo fue perfecto. 100% recomendados."</p>
+                    <div class="font-bold">María G. <span class="font-normal text-gray-400 ml-2">Desde Colombia</span></div>
+                </div>
+                <div class="p-10 rounded-[3rem] bg-gray-50 border border-gray-100">
+                    <div class="text-brik-orange mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 italic mb-8 text-lg">"Me encantó que no hubo cargos ocultos al llegar. Brik Rental es honestidad pura en Florida."</p>
+                    <div class="font-bold">Carlos L. <span class="font-normal text-gray-400 ml-2">Desde Chile</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Negro Moderno -->
+    <footer class="bg-brik-blue text-white py-20">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-black italic mb-8 text-brik-orange uppercase tracking-widest">Brik Car Rental</h2>
+            <div class="flex justify-center gap-10 text-sm font-bold uppercase tracking-widest text-gray-400 mb-12">
+                <span>Miami Int.</span>
+                <span>Orlando MCO</span>
+                <span>Ft. Lauderdale</span>
+            </div>
+            <p class="text-gray-500 text-xs">© 2026 FLORIDA, USA. TU SEGURIDAD ES NUESTRO COMPROMISO.</p>
+        </div>
     </footer>
 
 </body>

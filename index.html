@@ -3,77 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brikrentalcar | Renta de Autos en Florida</title>
+    <title>Brik Car Rental | Florida Premium Service</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-[#F8FAFC] text-[#0F172A]">
 
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-            <h1 class="text-2xl font-bold text-blue-700">Brikrentalcar</h1>
-            <div class="space-x-4">
-                <a href="https://wa.me/tu-numero-aqui" class="bg-green-500 text-white px-4 py-2 rounded-full font-bold hover:bg-green-600 transition">
-                    <i class="fab fa-whatsapp"></i> Reservar
-                </a>
+    <!-- Navbar Moderna -->
+    <nav class="fixed top-0 w-full glass z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-200">
+                    <i class="fas fa-key"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tight text-blue-900">Brik<span class="text-blue-600">Rental</span></span>
             </div>
+            <a href="https://wa.me/14073937237" class="bg-[#25D366] hover:scale-105 text-white px-6 py-3 rounded-2xl font-bold shadow-xl shadow-green-100 transition-all flex items-center gap-2 text-sm">
+                <i class="fab fa-whatsapp text-lg"></i> RESERVAR AHORA
+            </a>
         </div>
     </nav>
 
-    <header class="relative bg-blue-900 text-white py-20 px-4 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Tu auto ideal en Florida te espera</h2>
-            <p class="text-xl opacity-90 mb-8">Servicio personalizado en Miami, Orlando y Fort Lauderdale.</p>
+    <!-- Hero Section con Impacto -->
+    <header class="relative pt-32 pb-20 px-6 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-10">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-400 via-transparent to-transparent"></div>
+        </div>
+        
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="inline-block px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-xs font-bold tracking-widest uppercase mb-6">Confianza y Transparencia</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-blue-950 mb-6 leading-tight">
+                Tu viaje en Florida <br>empieza <span class="text-blue-600 underline decoration-blue-200">aquí.</span>
+            </h1>
+            <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-12 leading-relaxed">
+                Renta de autos sin cargos ocultos. Entrega personalizada en aeropuertos y hoteles de Miami y Orlando.
+            </p>
+            
             <div class="flex flex-wrap justify-center gap-4">
-                <div class="bg-white/10 p-4 rounded-lg backdrop-blur-sm">📍 Miami</div>
-                <div class="bg-white/10 p-4 rounded-lg backdrop-blur-sm">📍 Orlando</div>
-                <div class="bg-white/10 p-4 rounded-lg backdrop-blur-sm">📍 Ft. Lauderdale</div>
+                <div class="flex items-center gap-3 bg-white px-6 py-4 rounded-2xl shadow-sm border border-gray-100">
+                    <i class="fas fa-check-circle text-blue-600"></i>
+                    <span class="font-semibold">Seguro Incluido</span>
+                </div>
+                <div class="flex items-center gap-3 bg-white px-6 py-4 rounded-2xl shadow-sm border border-gray-100">
+                    <i class="fas fa-check-circle text-blue-600"></i>
+                    <span class="font-semibold">Km Ilimitado</span>
+                </div>
+                <div class="flex items-center gap-3 bg-white px-6 py-4 rounded-2xl shadow-sm border border-gray-100">
+                    <i class="fas fa-check-circle text-blue-600"></i>
+                    <span class="font-semibold">Atención 24/7</span>
+                </div>
             </div>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 py-16">
-        <h3 class="text-3xl font-bold text-center mb-12">Nuestra Flota</h3>
+    <!-- Flota con Imágenes Reales (Simuladas) -->
+    <main class="max-w-7xl mx-auto px-6 py-20">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <h2 class="text-3xl font-extrabold text-blue-950">Nuestra Flota</h2>
+                <p class="text-gray-500 mt-2">Vehículos nuevos y sanitizados</p>
+            </div>
+        </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-                <div class="h-48 bg-gray-200 flex items-center justify-center">
-                    <i class="fas fa-car text-6xl text-gray-400"></i>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Sedán -->
+            <div class="group bg-white rounded-[2rem] overflow-hidden shadow-xl shadow-gray-100 border border-gray-50 hover:border-blue-200 transition-all">
+                <div class="relative h-60 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&q=80&w=800" alt="Sedan" class="w-full h-full object-cover group-hover:scale-110 transition-duration-500">
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-blue-600">TOP VENTAS</div>
                 </div>
-                <div class="p-6">
-                    <h4 class="text-xl font-bold mb-2">Económico / Sedán</h4>
-                    <p class="text-gray-600 mb-4 font-semibold">Desde $35/día</p>
-                    <button class="w-full border-2 border-blue-600 text-blue-600 font-bold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition">Ver disponibilidad</button>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-blue-950">Sedán Económico</h3>
+                            <p class="text-sm text-gray-400">Toyota Corolla o similar</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-2xl font-black text-blue-600">$35</span>
+                            <span class="text-xs text-gray-400 block uppercase font-bold">/ día</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mb-8 text-sm text-gray-500">
+                        <span><i class="fas fa-user-friends mr-1"></i> 5</span>
+                        <span><i class="fas fa-suitcase mr-1"></i> 2</span>
+                        <span><i class="fas fa-gas-pump mr-1"></i> Híbrido/G</span>
+                    </div>
+                    <a href="https://wa.me/14073937237" class="block w-full bg-blue-50 text-blue-700 font-bold py-4 rounded-2xl text-center group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        Consultar Disponibilidad
+                    </a>
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-                <div class="h-48 bg-gray-200 flex items-center justify-center">
-                    <i class="fas fa-shuttle-van text-6xl text-gray-400"></i>
+            <!-- SUV -->
+            <div class="group bg-white rounded-[2rem] overflow-hidden shadow-xl shadow-gray-100 border border-gray-50 hover:border-blue-200 transition-all">
+                <div class="relative h-60 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800" alt="SUV" class="w-full h-full object-cover group-hover:scale-110 transition-duration-500">
                 </div>
-                <div class="p-6">
-                    <h4 class="text-xl font-bold mb-2">SUV Familiar</h4>
-                    <p class="text-gray-600 mb-4 font-semibold">Desde $55/día</p>
-                    <button class="w-full border-2 border-blue-600 text-blue-600 font-bold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition">Ver disponibilidad</button>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-blue-950">SUV Familiar</h3>
+                            <p class="text-sm text-gray-400">Nissan Rogue o similar</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-2xl font-black text-blue-600">$55</span>
+                            <span class="text-xs text-gray-400 block uppercase font-bold">/ día</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mb-8 text-sm text-gray-500">
+                        <span><i class="fas fa-user-friends mr-1"></i> 5</span>
+                        <span><i class="fas fa-suitcase mr-1"></i> 4</span>
+                        <span><i class="fas fa-snowflake mr-1"></i> A/C</span>
+                    </div>
+                    <a href="https://wa.me/14073937237" class="block w-full bg-blue-50 text-blue-700 font-bold py-4 rounded-2xl text-center group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        Consultar Disponibilidad
+                    </a>
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-                <div class="h-48 bg-gray-200 flex items-center justify-center">
-                    <i class="fas fa-bus text-6xl text-gray-400"></i>
+            <!-- Minivan -->
+            <div class="group bg-white rounded-[2rem] overflow-hidden shadow-xl shadow-gray-100 border border-gray-50 hover:border-blue-200 transition-all">
+                <div class="relative h-60 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800" alt="Minivan" class="w-full h-full object-cover group-hover:scale-110 transition-duration-500">
                 </div>
-                <div class="p-6">
-                    <h4 class="text-xl font-bold mb-2">Minivan (7-8 Pax)</h4>
-                    <p class="text-gray-600 mb-4 font-semibold">Desde $75/día</p>
-                    <button class="w-full border-2 border-blue-600 text-blue-600 font-bold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition">Ver disponibilidad</button>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-blue-950">Premium Van</h3>
+                            <p class="text-sm text-gray-400">Chrysler Pacifica (7 Pax)</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-2xl font-black text-blue-600">$75</span>
+                            <span class="text-xs text-gray-400 block uppercase font-bold">/ día</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mb-8 text-sm text-gray-500">
+                        <span><i class="fas fa-user-friends mr-1"></i> 7</span>
+                        <span><i class="fas fa-suitcase mr-1"></i> 5</span>
+                        <span><i class="fas fa-tv mr-1"></i> Entretenimiento</span>
+                    </div>
+                    <a href="https://wa.me/14073937237" class="block w-full bg-blue-50 text-blue-700 font-bold py-4 rounded-2xl text-center group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        Consultar Disponibilidad
+                    </a>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-gray-100 py-12 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-gray-500 font-medium">© 2026 Brikrentalcar - Renta de autos para latinos en USA</p>
+    <!-- Footer Simple y Elegante -->
+    <footer class="bg-blue-950 text-white py-20">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8">¿Listo para conducir en Florida?</h2>
+            <div class="flex flex-wrap justify-center gap-8 mb-12">
+                <div class="text-center">
+                    <div class="text-2xl font-bold">100%</div>
+                    <div class="text-blue-300 text-sm">Transparencia</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold">+500</div>
+                    <div class="text-blue-300 text-sm">Clientes Felices</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold">Sin Depósito</div>
+                    <div class="text-blue-300 text-sm">Opcional</div>
+                </div>
+            </div>
+            <p class="opacity-40 text-sm italic">© 2026 Brikrentalcar. Florida, USA. El servicio que tu familia merece.</p>
         </div>
     </footer>
 
